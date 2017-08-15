@@ -1,12 +1,13 @@
 <h1>Index</h1>
-
+<h3><%= link_to "Create new", new_task_path %></h2>
 <% @tasks.each do |task| %>
   <h2><%= link_to task.name, edit_task_path(task) %></h2>
   <p><%= task.details %></p>
   <%= link_to "Delete", task_path(task),
       method: :delete,
       data: { confirm: "Are you sure?" } %>
-  <h3><%= link_to "Create new", new_task_path %></h2>
 <% end %>
+
+
 
 
